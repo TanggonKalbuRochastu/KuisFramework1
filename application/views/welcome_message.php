@@ -69,6 +69,53 @@
 				<p align="center" style="font-size: 20px">P.S: The Search Bar doesn't work yet</p>
 			</div>
 		</div>
+		<div class="container">
+			
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+				<h1>DATA DARI MODEL DENGAN RETURN OBJECT</h1>
+				<div class="table-responsive">
+					<table class="table table-hover">
+						<tbody>
+							<tr>
+								<td>Nama</td>
+								<td>NIM</td>
+								<td>Alamat</td>
+							</tr>
+							<?php foreach ($biodata_object as $key) {?>
+								<tr>
+									<td> <?php echo $key->nama; ?> </td>
+									<td><?php echo $key->nim; ?></td>
+									<td><?php echo $key->alamat; ?></td>
+								</tr>
+
+							<?php } ?>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="table-responsive">
+			<h1>DATA DARI MODEL DENGAN RETURN ARRAY</h1>
+				<table class="table table-hover">
+					<tbody>
+						<tr>
+							<td>Nama</td>
+							<td>NIM</td>
+							<td>Alamat</td>
+						</tr>
+						<?php foreach ($biodata_array as $key) {?>
+						<tr>
+							<td> <?php echo $key['nama'] ?></td>
+							<td><?php echo $key['nim'] ?></td>
+							<td><?php echo $key['alamat'] ?></td>
+						</tr>				
+						<?php } ?>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		
 	</div>
 
     </div><!-- /.container -->
